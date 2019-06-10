@@ -1,0 +1,169 @@
+Questão 1 
+
+R: pi = 3.14
+raio = int(input("informe um valor para o raio da sua circunferência"))
+area = pi * (raio*raio)
+print("O valor da área da sua circunferência é de ", area)
+
+
+Questão 2
+
+R: coxinha = 3.50 
+
+coxinha_quantidade = int(input("Informe a quantidade de coxinhas: ")) 
+
+total_pagar = (coxinha * coxinha_quantidade)
+
+print ("O valor por comprar ", coxinha_quantidade, "coxinhas é de ", total_pagar)
+
+
+
+Questão 3 
+
+R: preco = 5 
+tempo_excedente = 0 
+tempo_minutos = int(input("Tempo utilizado: ")) 
+
+if tempo_minutos <= 10: 
+print("Valor a ser paga: ", preco) 
+
+else: 
+
+tempo_minutos > 10 
+tempo_excedente = (tempo_minutos - 10) 
+preco = 5 + (tempo_excedente * 5 * 0.2) 
+print("Valor a ser pago: ", preco)
+
+
+Questão 4
+
+R: num=int(input("Digite um numero"))
+contador=1
+while contador <= num:
+   if num%2==1:
+       contador=contador+1
+       print("primo")
+       break
+   else:
+       print("não primo")
+       break
+
+num=int(input("Digite um numero"))
+if num%2==1:
+   print("primo")
+else:
+   print("não primo")
+
+
+Questão 5
+
+todos = [x for x in range(101)] 
+par = [x for x in todos if x%2==0] 
+impar = [x for x in todos if x%2!=0] 
+print("Lista Completa:",todos) 
+print("Lista Par:",par)
+print("Lista Ímpar:",impar)
+
+
+Questão 6
+
+num = int(input("Digite um número: "))
+tot = 0
+for c in range(1, num + 1):
+   if num % c == 0:
+       print("\033[33m",end="")
+       tot += 1
+   else:
+       print("\033[31m",end="")
+   print("{}".format(c),end="")
+print("\n\033[m0 número {} foi divisível {} vezes".format(num, tot))
+if tot == 2:
+   print("è primo")
+else:
+   print("não é primo")
+
+
+Questão 7
+
+import math
+
+n = int(input('Digite um número '))
+def factor(n):
+  if ( n == 0):
+    return None
+  elif(n==1):
+      return 1
+  else:    
+      theFactors = []
+      for i in range(2,n+1):          
+          while n % i == 0:
+              n = n/i
+              theFactors.append(i)
+      return theFactors
+
+
+if __name__ == '__main__':
+    print(factor(n))
+
+Questão 8 
+
+quant_cds = int(input("Digite a quantidade de CD's : "))
+cds = []
+n_cd = 1
+
+for i in range(quant_cds):
+    print("CD número ", n_cd)
+    valor_cd = cds.append(float(input("Digite o valor do CD: ")))
+    n_cd += 1
+
+media = sum(cds) / len(cds)
+print("A media para cada CD é: ", media)
+
+Questão 9 
+
+conjunto=int(input("Quantos valores vc deseja no conjunto?"))
+n=int(input("Digite o valor do numero"))
+n1=n
+soma=0
+maior=n
+menor=n
+for i in range (1,conjunto):
+ n=int(input("Digite o valor do numero"))
+   soma=soma+n
+   if n>maior:
+     maior=n
+   elif n<menor:
+     menor=n
+ print(maior)
+ print(menor)
+ print(soma)
+
+
+Questão 10
+
+void armstrong(int num);
+
+main(){
+       int num;
+       printf("Entre com o valor:");
+       scanf("%d",&num);
+       armstrong(num);
+       getch();
+}
+
+void armstrong(int num){
+     int *a, *b, *c, *arm;
+     a=(int *)malloc(sizeof(int));
+     b=(int *)malloc(sizeof(int));
+     c=(int *)malloc(sizeof(int));
+     arm=(int *)malloc(sizeof(int));
+     *a=num/100;
+     *b=(num - *a*100)/10;
+     *c=(num -(*a*100)-(*b*10));
+     *arm=pow(*a,3) + pow(*b,3) + pow(*c,3);
+     if(num==*arm)
+                  printf("%d e um numero de Armstrong!",num);
+     else
+         printf("%d nao e um numero de Armstrong",num);
+}
+
